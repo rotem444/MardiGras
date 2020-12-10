@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="C:\Users\saraf\jquery-3.5.1.min.js"></script>
+
+    <style>
+      @font-face {
+        font-family: roberto;
+        src: url("C:/myProject/fonts/roberto/RobotoBlack.ttf");
+      }
+      * {
+        font-family: roberto;
+      }
+
+      .sponsers {
+        position: absolute;
+        top: 0;
+        left: 25%;
+        width: 50%;
+        height: 30%;
+        border: 0;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+      }
+      .sponsers a {
+        display: block;
+        width: 30%;
+        height: 150px;
+        margin: 5px;
+        z-index: 2;
+        background-color: #f2f2f2;
+        border: 5px solid #0d0d0d;
+      }
+
+      .sponsers a div img {
+        width: 100%;
+        height: 70%;
+        margin: 0;
+        border: 0 solid #0d0d0d;
+      }
+      .sponsers a div {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        border: 0 solid #0d0d0d;
+        background-color: #f2f2f2;
+      }
+      .sponsers a div p {
+        display: block;
+        margin: 0;
+        border: 0 solid #0d0d0d;
+        height: 30%;
+        text-align: center;
+        background-color: #f2f2f2;
+      }
+
+      #imgArea {
+        position: absolute;
+        display: block;
+        left: -100%;
+        top: 0;
+        width: 300%;
+        height: 1000px;
+        border: 0;
+        margin: 0;
+      }
+      #imgArea img {
+        width: 33.333333%;
+        height: 1000px;
+        border: 0;
+        margin: 0;
+        display: block;
+        float: left;
+      }
+
+      body {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        height: 1000px;
+      }
+      #slider {
+        position: absolute;
+        top: 55%;
+        left: 0;
+        height: 20%;
+        width: 100%;
+        margin: 0;
+        border: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+      }
+      #slider img {
+        width: 18%;
+        height: 90%;
+        margin: 1%;
+        border: 7px solid #0d0d0d;
+        box-sizing: border-box;
+        cursor: pointer;
+      }
+      #imgArea img:first-child {
+        width: 0;
+      }
+      #slider img:first-child {
+        border-color: #9453a6;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="sponsers">
+      <a href="./sponPage/spon0.html"
+        ><div class="">
+          <img src=".\image\sponsers\sheratonNewOrleansHotel.jpg" alt="" />
+          <p>Sheraton New Orleans Hotel</p>
+        </div></a
+      >
+      <a href="./sponPage/spon1.html"
+        ><div class="">
+          <img src=".\image\sponsers\walkOnsBistreauxAndBar.jpg" alt="" />
+          <p>Walk-On's Bistreaux and Bar</p>
+        </div></a
+      >
+      <a href="./sponPage/spon2.html"
+        ><div class="">
+          <img src=".\image\sponsers\aceHotelNewOrleans.jpg" alt="" />
+          <p>Ace Hotel New Orleans</p>
+        </div></a
+      >
+      <a href="https://www.ritzcarlton.com/en/hotels/new-orleans"
+        ><div class="">
+          <img src=".\image\sponsers\theRitzCarltonNewOrleans.jpg" alt="" />
+          <p>The Ritz-Carlton, New Orleans</p>
+        </div></a
+      >
+      <a
+        href="https://www.premiumparking.com/P402?back_params=%2Fcity%2Fnew-orleans%2Ffrench-quarter"
+        ><div class="">
+          <img src=".\image\sponsers\premiumParkingP402.jpg" alt="" />
+          <p>Premium Parking - P402</p>
+        </div></a
+      >
+      <a href="https://findachildrensmuseum.org/"
+        ><div class="">
+          <img src=".\image\sponsers\louisianaChildrensMuseum.jpg" alt="" />
+          <p>Louisiana Children's Museum</p>
+        </div></a
+      >
+      <a href="http://www.museumofdeath.net/nola"
+        ><div class="">
+          <img src=".\image\sponsers\museumOfDeath.jpg" alt="" />
+          <p>Museum of Death</p>
+        </div></a
+      >
+      <a href="https://www.bloodymarystours.com/hauntedmuseum.html"
+        ><div class="">
+          <img src=".\image\sponsers\hauntedMuseum.jpg" alt="" />
+          <p>Haunted Museum</p>
+        </div></a
+      >
+    </div>
+    <div id="imgArea">
+      <img src="" alt="" />
+      <img src="" alt="" />
+      <img src="./image/sponsorsBackground/image0.jpg" alt="" />
+    </div>
+    <div id="slider">
+      <img src="" alt="" />
+      <img src="" alt="" />
+      <img src="" alt="" />
+      <img src="" alt="" />
+      <img src="" alt="" />
+    </div>
+    <script>
+      let currentImg = 0;
+      let isPressed = false;
+      let imgSlider = $("#slider img");
+      imgSlider.each(function (_index) {
+        let img = `./image/sponsorsBackground/image${_index}.jpg`;
+        this.src = img;
+        $(this).click(function () {
+          isPressed = true;
+          if (currentImg != _index) {
+            imgSlider.eq(currentImg).css("border-color", "#0D0D0D");
+            currentImg = _index;
+            $("#imgArea img:nth-child(2)").attr("src", img);
+            $("#imgArea img:first-child").animate(
+              { width: "33.33%" },
+              function () {
+                $("#imgArea img:last-child")
+                  .width(0)
+                  .prependTo("#imgArea")
+                  .attr("src", "");
+              }
+            );
+          }
+        });
+        $(this).hover(
+          function () {
+            $(this).css("border-color", "#9453a6");
+          },
+          function () {
+            if (currentImg != _index) $(this).css("border-color", "#0D0D0D");
+          }
+        );
+      });
+      setInterval(() => {
+        if (!isPressed) {
+          if (!imgSlider.eq(currentImg).is(":hover"))
+            imgSlider.eq(currentImg).css("border-color", "#0D0D0D");
+          currentImg = currentImg == 4 ? 0 : currentImg + 1;
+          imgSlider.eq(currentImg).css("border-color", "#9453a6");
+          $("#imgArea img:nth-child(2)").attr(
+            "src",
+            `./image/sponsorsBackground/image${currentImg}.jpg`
+          );
+          $("#imgArea img:first-child").animate(
+            { width: "33.33%" },
+            function () {
+              $("#imgArea img:last-child")
+                .width(0)
+                .prependTo("#imgArea")
+                .attr("src", "");
+            }
+          );
+        } else {
+          isPressed = false;
+        }
+      }, 5000);
+    </script>
+  </body>
+</html>

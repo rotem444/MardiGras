@@ -1,0 +1,114 @@
+[
+    {
+        "question": "The Battle of New Orleans was the last major military conflict of which war?",
+        "options":[
+            "Civil War",
+            "Revolutionary War",
+            "War of 1812",
+            "French-Indian War"
+        ],
+        "answer": 2
+
+    },
+    {
+        "question": "The unique history and culture of the city make it a common setting for movies, as well as a frequent location for cinema production. Which of the following notable movies was NOT set nor filmed in New Orleans?",
+        "options":[
+            "Gone with the Wind",
+            "A Streetcar Named Desire",
+            "Easy Rider",
+            "The Big Easy"
+        ],
+        "answer": 0
+
+    },
+    {
+        "question": "Which of the following is NOT a nickname of the city of New Orleans?",
+        "options":[
+            "The Big Easy",
+            "Crescent City",
+            "The City that Care Forgot",
+            "Cajun Capital"
+        ],
+        "answer": 3
+
+    },
+    {
+        "question": "The famous stadium in New Orleans carries which name?",
+        "options":[
+            "Silver Dome",
+            "Louisiana Arena",
+            "Saints Stadium",
+            "Superdome"
+        ],
+        "answer": 3
+
+    },
+    {
+        "question": "While known internationally for this holiday, not many know the meaning of its name. What does the French term 'Mardi Gras' mean in English?",
+        "options":[
+            "Parade Season",
+            "Tourist Trap",
+            "Drunken Revelry",
+            "Fat Tuesday"
+        ],
+        "answer": 3
+
+    },
+    {
+        "question": "The French Quarter features a small park named Jackson Square, which bears a monument of this namesake. Who is this Jackson for whom Jackson Square is named?",
+        "options":[
+            "Stonewall Jackson",
+            "Andrew Jackson",
+            "Michael Jackson",
+            "Hancock Lee Jackson"
+        ],
+        "answer": 1
+
+    },
+    {
+        "question": "Which country ruled New Orleans when most of its French Quarter was developed?",
+        "options":[
+            "France",
+            "Spain",
+            "Germany",
+            "United Kingdom"
+        ],
+        "answer": 1
+
+    },
+    {
+        "question": "New Orleans is regarded to be the 'birthplace' of which musical medium?",
+        "options":[
+            "Jazz",
+            "Blues",
+            "Rap",
+            "Soul"
+        ],
+        "answer": 3
+
+    },
+    {
+        "question": "While most people have heard of gumbo (if not enjoyed a bowl of it), not many know of the word's origin. From which international region does the name originate?",
+        "options":[
+            "France",
+            "Southeast Asia",
+            "Mexico",
+            "West Africa"
+        ],
+        "answer": 3
+
+    },
+    {
+        "question": "New Orleans can claim partial credit for the success of the Allied Forces in World War II. Successful invasion of Normandy on 'D-Day' is attributed to the particular watercraft that brought troops onshore for that battle, for example, and these unique boats were actually developed and manufactured on the south shore of Lake Pontchartrain in New Orleans. What was the name of this particular watercraft?",
+        "options":[
+            "USS New Orleans",
+            "Creole Canoe",
+            "Bayou Boat",
+            "Higgins Boat"
+        ],
+        "answer": 3
+
+    }
+    
+
+]
