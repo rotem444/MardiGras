@@ -112,13 +112,14 @@ let triviaAraay = `[
     
  
  ]`;
-console.log("open");
+
 triviaAraay = JSON.parse(triviaAraay);
 let container = $(".container");
 
 let options, questionNamber, questionSlider, points;
 
 const initGame = () => {
+  console.log("abc", 90);
   container.html(``);
   for (let i = 1; i <= 10; i++) {
     container.append(`<div class="questionNamber"><br>${i}</div>`);
