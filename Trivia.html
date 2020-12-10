@@ -1,121 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script src="C:\Users\saraf\jquery-3.5.1.min.js"></script>
     <script defer src="C:\myProject\Trivia.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <style>
-        @font-face {
-            font-family:roberto;
-            src: url("C:/myProject/fonts/roberto/RobotoBlack.ttf");
-        }
-        *{
-            font-family:roberto;
-        }
-        .container{
-            position: absolute;
-            top: 0;
-            right: 0;
-            margin: 0, auto;
-            width: 100%;
-            height: 900px;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            z-index: 1;
-            background-color: #f2f2f2;
-            
-            
-        }
+      @font-face {
+        font-family: roberto;
+        src: url("C:/myProject/fonts/roberto/RobotoBlack.ttf");
+      }
+      * {
+        font-family: roberto;
+      }
+      .container {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 0, auto;
+        width: 100%;
+        height: 900px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        z-index: 1;
+        background-color: #f2f2f2;
+      }
 
-        #promp:first-child{
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 100%;
-            height: 900px;
-            z-index: 2;
-            background-color:rgba(20, 20, 100, 0.5);
+      #promp:first-child {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 900px;
+        z-index: 2;
+        background-color: rgba(20, 20, 100, 0.5);
+      }
+      #question {
+        width: 80%;
+        height: 200px;
+        margin: 1%;
+        background-color: #9453a6;
+        text-align: center;
+        line-height: 200px;
+        z-index: 1;
+      }
+      .option {
+        width: 45%;
+        height: 100px;
+        margin: 0 auto;
+        background-color: #8cbf3f;
+        margin: 1%;
+        text-align: center;
+        line-height: 100px;
+      }
+      .questionNamber {
+        width: 8%;
+        height: 100px;
+        background-color: grey;
+        margin: 1%;
+        text-align: center;
+        line-height: 50px;
+        box-sizing: border-box;
+        border: 0 solid #0d0d0d;
+        font-size: 1.5em;
+      }
 
-        }
-        #question{
-            width: 80%;
-            height: 200px;
-            margin: 1%;
-            background-color: #9453a6;
-            text-align: center;
-            line-height: 200px;
-            z-index: 1;
-        }
-        .option{
-            width: 45%;
-            height: 100px;
-            margin: 0 auto;
-            background-color: #8cbf3f;
-            margin: 1%;
-            text-align: center;
-            line-height: 100px;
-            
-            
-        }
-        .questionNamber{
-            width: 8%;
-            height: 100px;
-            background-color:grey;
-            margin: 1%;
-            text-align: center;
-            line-height: 50px;
-            box-sizing: border-box;
-            border: 0 solid #0D0D0D;
-            font-size: 1.5em;
-            
-        }
-
-        #points{
-            width: 20%;
-            height: 100px;
-            text-align: center;
-            line-height: 100px;
-            background-color:#9453a6;
-            
-
-        }
-        .start{
-            background-color:#f2cc0f;
-            width: 40%;
-            height: 400px;
-            font-size: 2em;
-            margin-top: 10%;
-            padding: 5%;
-            text-align: center;
-        }
-        .gameOver{
-            width: 40%;
-            height: 300px;
-            font-size: 2em;
-            background-color: #f2cc0f;
-            padding: 5%;
-            margin-top: 5%;
-            text-align: center;
-        }
-        button{
-            width: 30%;
-            height: 20%;
-            border: 2% solid #0D0D0D;
-            box-sizing: border-box;
-            
-        }
-
+      #points {
+        width: 20%;
+        height: 100px;
+        text-align: center;
+        line-height: 100px;
+        background-color: #9453a6;
+      }
+      .start {
+        background-color: #f2cc0f;
+        width: 40%;
+        height: 400px;
+        font-size: 2em;
+        margin-top: 10%;
+        padding: 5%;
+        text-align: center;
+      }
+      .gameOver {
+        width: 40%;
+        height: 300px;
+        font-size: 2em;
+        background-color: #f2cc0f;
+        padding: 5%;
+        margin-top: 5%;
+        text-align: center;
+      }
+      button {
+        width: 30%;
+        height: 20%;
+        border: 2% solid #0d0d0d;
+        box-sizing: border-box;
+      }
     </style>
-</head>
-<body>
-    
-     <div class="container">
-        <div class="start">Here are 10 questions about New Orleans.<br> Each question will earn you 10 points.<br> Once you've answered all the questions, you can go back and see your score again <br><br><br><br><button>click to start</button> </div>
-       
-</div> 
-
-</body>
+  </head>
+  <body>
+    <div class="container">
+      <div class="start">
+        Here are 10 questions about New Orleans.<br />
+        Each question will earn you 10 points.<br />
+        Once you've answered all the questions, you can go back and see your
+        score again <br /><br /><br /><br /><button>click to start</button>
+      </div>
+    </div>
+  </body>
 </html>
