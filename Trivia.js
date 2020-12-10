@@ -1,4 +1,3 @@
-
 let triviaAraay = `[
     {
         "question": "The Battle of New Orleans was the last major military conflict of which war?",
@@ -112,47 +111,59 @@ let triviaAraay = `[
     }
     
  
- ]`
- triviaAraay = JSON.parse(triviaAraay)
- let container = $(".container");
- 
- let options, questionNamber, questionSlider, points;
- 
- const initGame = () =>{
- 
-     container.html(``)
-     for(let i = 1; i <= 10; i++){
-         container.append(`<div class="questionNamber"><br>${i}</div>`)
- }
-     container.append(`<div id="question">${triviaAraay[0].question}</div>`)
-     for(let i = 0; i <= 3; i++){
-         container.append(`<div class="option">${triviaAraay[0].options[i]}</div>`)
- }
-     container.append(`<div id="points">points: <span>0</span>`)
-     questionNamber = points = 0;
-     questionSlider = $(".questionNamber");
-     options = $(".option");
-     questionSlider.eq(0).css({"border-width": "5px", "background-color":"#f2cc0f"})
-     options.each(function (_index) { 
-     $(this).click(function () { 
-         if(triviaAraay[questionNamber].answer == _index){
-            $("#points span").html(points += 10)
-            questionSlider.eq(questionNamber).css({"background-color": "#8cbf3f", "border-width": "0"}).prepend("&#10003;");
-         }else{
-             questionSlider.eq(questionNamber).css({"background-color": "red", "border-width": "0"}).prepend("&#10060;");
-         }
-         if(++questionNamber == 10){
-             $("#question, .option, #points").remove();
-             container.append(`<div class="gameOver">you got ${points} points <br><br><br><br><br><button>click to try again</button></div>`);
-             $("button").click(initGame);
-         }else{
-             $(questionSlider[questionNamber]).css({"background-color": "#f2cc0f","border-width":"5px"});
-             $("#question").html(triviaAraay[questionNamber].question);
-             options.html(triviaAraay[questionNamber].options[_index])
-         }
-         
-     });
- });
- }
- 
- $("button").click(initGame)
+ ]`;
+console.log("open");
+triviaAraay = JSON.parse(triviaAraay);
+let container = $(".container");
+
+let options, questionNamber, questionSlider, points;
+
+const initGame = () => {
+  container.html(``);
+  for (let i = 1; i <= 10; i++) {
+    container.append(`<div class="questionNamber"><br>${i}</div>`);
+  }
+  container.append(`<div id="question">${triviaAraay[0].question}</div>`);
+  for (let i = 0; i <= 3; i++) {
+    container.append(`<div class="option">${triviaAraay[0].options[i]}</div>`);
+  }
+  container.append(`<div id="points">points: <span>0</span>`);
+  questionNamber = points = 0;
+  questionSlider = $(".questionNamber");
+  options = $(".option");
+  questionSlider
+    .eq(0)
+    .css({ "border-width": "5px", "background-color": "#f2cc0f" });
+  options.each(function (_index) {
+    $(this).click(function () {
+      if (triviaAraay[questionNamber].answer == _index) {
+        $("#points span").html((points += 10));
+        questionSlider
+          .eq(questionNamber)
+          .css({ "background-color": "#8cbf3f", "border-width": "0" })
+          .prepend("&#10003;");
+      } else {
+        questionSlider
+          .eq(questionNamber)
+          .css({ "background-color": "red", "border-width": "0" })
+          .prepend("&#10060;");
+      }
+      if (++questionNamber == 10) {
+        $("#question, .option, #points").remove();
+        container.append(
+          `<div class="gameOver">you got ${points} points <br><br><br><br><br><button>click to try again</button></div>`
+        );
+        $("button").click(initGame);
+      } else {
+        $(questionSlider[questionNamber]).css({
+          "background-color": "#f2cc0f",
+          "border-width": "5px",
+        });
+        $("#question").html(triviaAraay[questionNamber].question);
+        options.html(triviaAraay[questionNamber].options[_index]);
+      }
+    });
+  });
+};
+
+$("button").click(initGame);
