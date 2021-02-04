@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Mardi Gras</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" type="text/css" href="main.css" />
+    <script src="C:\Users\saraf\jquery-3.5.1.min.js"></script>
+  </head>
+
+  <body>
+    <img id="logo" src=".\image\logo\logo.jpg" alt="Margi Gras Logo" />
+    <nav>
+      <div class="page">Sponsors</div>
+      <div class="page">About</div>
+      <div class="page">Media</div>
+      <div class="page">FAQ</div>
+      <div class="page">Contact</div>
+      <div class="page">Trivia</div>
+    </nav>
+    <img
+      class="baner"
+      src="https://img.mako.co.il/2019/11/18/13213_12Boom-ForLife_MAKO_01-300x250px.gif"
+      frameborder="0"
+    />
+    <iframe id="myIframe" src="Sponsors.html" frameborder="0"></iframe>
+    <img
+      class="baner"
+      src="https://tpc.googlesyndication.com/simgad/16270847601505592559?sqp=4sqPyQQrQikqJwhfEAEdAAC0QiABKAEwCTgDQPCTCUgAUAFYAWBfcAJ4AcUBLbKdPg&rs=AOga4qkE042TMgNudduVd4rCIJ8XGjWtow"
+    />
+    <footer
+      class="container-fluid d-flex justify-content-center align-items-center"
+    >
+      created by Rotem Saraf
+    </footer>
+
+    <script>
+      let currentPage = "Sponsors";
+      let baner = $(".baner");
+      $(".page").click(function () {
+        $(`.page:contains(${currentPage})`).css("background-color", "#f2f2f2");
+        $("#myIframe").attr("src", `${(currentPage = $(this).html())}.html`);
+        $(`.page:contains(${currentPage})`).css("background-color", "#f2cc0f");
+        switch (currentPage) {
+          case "Sponsors":
+            baner
+              .eq(0)
+              .attr(
+                "src",
+                "https://img.mako.co.il/2019/11/18/13213_12Boom-ForLife_MAKO_01-300x250px.gif"
+              );
+            baner
+              .eq(1)
+              .attr(
+                "src",
+                "https://tpc.googlesyndication.com/simgad/16270847601505592559?sqp=4sqPyQQrQikqJwhfEAEdAAC0QiABKAEwCTgDQPCTCUgAUAFYAWBfcAJ4AcUBLbKdPg&rs=AOga4qkE042TMgNudduVd4rCIJ8XGjWtow"
+              );
+            break;
+          case "About":
+            baner
+              .eq(0)
+              .attr(
+                "src",
+                "https://exposeboxwallashops.blob.core.windows.net/wallahome2/BannerBirthday.jpg"
+              );
+            baner
+              .eq(1)
+              .attr(
+                "src",
+                "https://img.wcdn.co.il/f_auto,w_100/3/0/0/2/3002255-46.jpg"
+              );
+            break;
+          case "Media":
+            baner
+              .eq(0)
+              .attr(
+                "src",
+                "https://img.mako.co.il/2020/06/16/MusicSchool_304x320.jpg"
+              );
+            baner
+              .eq(1)
+              .attr(
+                "src",
+                "https://tpc.googlesyndication.com/simgad/13656032054881253619"
+              );
+            break;
+          default:
+            baner.eq(0).attr("src", "");
+            baner.eq(1).attr("src", "");
+            break;
+        }
+      });
+    </script>
+  </body>
+</html>

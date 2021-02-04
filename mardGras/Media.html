@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="C:\Users\saraf\jquery-3.5.1.min.js"></script>
+    <script src=".\lightbox\html5lightbox\html5lightbox.js"></script>
+    <title>Media</title>
+    <style>
+    @font-face {
+        font-family:Pattaya;
+        src: url("C:/myProject/fonts/Pattay/PattayaRegular.ttf");
+    }
+    *{
+        font-family:Pattaya;
+    }
+        .container{
+        margin: 0, auto;
+        width: 100%;
+        height: 1000px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        }
+        a{
+            width: 25%;
+            height: 400px;
+            margin: 1%;
+            box-sizing: border-box;
+            
+        }
+        img{
+            width: 100%;
+            height: 350px;
+        }
+
+        .mediaArea{
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            font-size: 1.5em;
+            
+        }
+        iframe{
+            margin: 1%;
+        }
+        .mediaArea div{
+            width: 100%;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>media</h1>
+        <div class="mediaArea"><div>Pictures:</div>
+    <a href="C:\myProject\image\sponsorsBackground\image0.jpg" class="html5lightbox" data-group="mygroup" data-thumbnail="C:\myProject\image\sponsorsBackground\image0.jpg" title="Toronto">
+        <img src="C:\myProject\image\sponsorsBackground\image0.jpg" alt="">
+    </a>
+    <a href="C:\myProject\image\sponsorsBackground\image1.jpg" class="html5lightbox" data-group="mygroup" data-thumbnail="C:\myProject\image\sponsorsBackground\image1.jpg" title="Toronto">
+        <img src="C:\myProject\image\sponsorsBackground\image1.jpg" alt="">
+    </a>
+    <a href="C:\myProject\image\sponsorsBackground\image2.jpg" class="html5lightbox" data-group="mygroup" data-thumbnail="C:\myProject\image\sponsorsBackground\image2.jpg" title="Toronto">
+        <img src="C:\myProject\image\sponsorsBackground\image2.jpg" alt="">
+    </a>
+    <a href="C:\myProject\image\sponsorsBackground\image3.jpg" class="html5lightbox" data-group="mygroup" data-thumbnail="C:\myProject\image\sponsorsBackground\image3.jpg" title="Toronto">
+        <img src="C:\myProject\image\sponsorsBackground\image3.jpg" alt="">
+    </a>
+    <a href="C:\myProject\image\sponsorsBackground\image4.jpg" class="html5lightbox" data-group="mygroup" data-thumbnail="C:\myProject\image\sponsorsBackground\image4.jpg" title="Toronto">
+        <img src="C:\myProject\image\sponsorsBackground\image4.jpg" alt="">
+    </a></div>
+    <div class="mediaArea">
+    <div> videos:</div>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/cT5vnPybf3Y" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/PcjLTrUDF3w" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/MYsm1JwYgYs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/VgiAXlX9PPM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/hzj1Hwa_6A8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/5Da2iw59ErU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+
+body,html{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+iframe{
+    height:80%;
+    width: 75%;
+
+}
+nav{
+    width: 99%;
+    height: 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    
+
+}
+nav .page{
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    width: 15%;
+    height: 80%;
+    margin:1%;
+    cursor: pointer;
+    
+}
+img{
+    width: 10%;
+    height: 80%;
+    margin:1%;
+}
+
